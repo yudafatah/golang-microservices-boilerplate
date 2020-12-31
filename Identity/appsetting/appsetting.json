@@ -1,0 +1,19 @@
+{
+    "port": ":8808",
+    "enableGinConsoleLog": true,
+    "enableGinFileLog": true,
+
+    "logFilename": "logs/server.log",
+    "logMaxSize": 10,
+    "logMaxBackups": 10,
+    "logMaxAge": 30,
+
+    "mgAddrs": "awfdb-shard-00-01.qqdrn.mongodb.net:27017",
+    "mgDbName": "dbawf",
+    "mgDbUsername": "artworkfairs",
+    "mgDbPassword": "semen1976",
+
+    "jwtSecretPassword": "47fab19090a41d7efc69cb542f31a47558f547808dd59fbef6468aa3e22127bb",
+    "issuer": "artworkfairs.com-4848Prod@",
+    "Audience": "Uvuvwevwevwe Onyetenyevwe Ugwemubwem Osas"
+}
