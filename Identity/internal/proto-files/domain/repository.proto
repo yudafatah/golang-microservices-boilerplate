@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package domain;
 
-option go_package = "bitbucket-repository-management-service/internal/gRPC/domain";
+option go_package = "github.com/yudafatah/golang-microservices-boilerplate/tree/main/Identity/internal/grpc/domain";
 
 message Repository {
 	int64 id  = 1;

@@ -2,9 +2,9 @@ syntax = "proto3";
 
 package service;
 
-option go_package = "bitbucket-repository-management-service/internal/gRPC/service";
+option go_package = "github.com/yudafatah/golang-microservices-boilerplate/tree/main/Identity/internal/grpc/service";
 
-import "bitbucket-repository-management-service/internal/proto-files/domain/repository.proto";
+import "github.com/yudafatah/golang-microservices-boilerplate/tree/main/Identity/internal/proto-files/domain/repository.proto";
 
 //RepositoryService Definition
 service RepositoryService {
