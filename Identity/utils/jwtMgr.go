@@ -17,6 +17,7 @@ import (
 type SdtClaims struct {
 	LastName string `json:"last_name"`
 	FirstName string `json:"first_name"`
+	Username string `json:"username"`
 	Role string `json:"role"`
 	Nationality string `json:"nationality"`
 	IsCompany bool `json:"is_company"`
@@ -31,12 +32,13 @@ type Utils struct {
 }
 
 // GenerateJWT generates token from the given information
-func (u *Utils) GenerateJWT(LastName string, FirstName string, Role string,
+func (u *Utils) GenerateJWT(LastName string, FirstName string, Username string, Role string,
 	Nationality string, IsCompany bool, UserId string, Email string, 
 	PhoneNumber string, ClientId string) (string, error) {
 	claims := SdtClaims{
 		LastName,
 		FirstName,
+		Username,
 		Role, 
 		Nationality,
 		IsCompany,
