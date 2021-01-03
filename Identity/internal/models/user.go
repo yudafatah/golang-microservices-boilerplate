@@ -19,7 +19,7 @@ type User struct {
 	Username string `bson:"username" json:"username" example:"yudafatah"`
 	CreatedTime time.Time `bson:"created_time" json:"created_time" example:"2020-12-31T17:00:00.000+00:00"`
 	UpdatedTime time.Time `bson:"updated_time" json:"updated_time" example:"2020-12-31T17:00:00.000+00:00"`
-	OldHashPassword string `bson:"old_hash_password" json:"old_hash example:"sdfsdf3f4f4"`
+	OldHashPassword string `bson:"old_hash_password" json:"old_hash_password" example:"sdfsdf3f4f4"`
 	HashPassword string `bson:"hash_password" json:"hash_password" example:"sfsdfsdfsd7fds8f"`
 	Email string `bson:"email" json:"email" example:"yudafatah@gmail.com"`
 	Address string `bson:"address" json:"address" example:"california"`
