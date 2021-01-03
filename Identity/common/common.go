@@ -30,6 +30,7 @@ package common
  
 	 JwtSecretPassword string `json:"jwtSecretPassword"`
 	 Issuer            string `json:"issuer"`
+	 Audience string `json:"audience"`
  }
  
  // Config shares the global configuration
