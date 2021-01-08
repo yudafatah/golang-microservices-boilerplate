@@ -6,16 +6,21 @@ option go_package = "github.com/yudafatah/golang-microservices-boilerplate/tree/
 
 import "github.com/yudafatah/golang-microservices-boilerplate/tree/main/Identity/internal/proto-files/domain/user.proto";
 
-//RepositoryService Definition
-service RepositoryService {
-	rpc add (domain.Repository) returns (AddRepositoryResponse);
+//UserService Definition
+service UserService {
+	rpc add (domain.User) returns (AuthResponse);
 }
  
-message AddRepositoryResponse {
-	domain.Repository addedRepository = 1;
+message AuthResponse {
+	Token token = 1;
 	Error error = 2;
 }
 message Error {
 	string code = 1;
 	string message = 2;
+}
+
+message Token{
+	string token = 1;
+	string refresher = 2;
 }
