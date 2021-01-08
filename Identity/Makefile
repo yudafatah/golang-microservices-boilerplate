@@ -8,6 +8,8 @@ BUILD=`git rev-parse HEAD`
 # Setup the -ldflags option for go build here, interpolate the variable values
 # LDFLAGS=-ldflags "-X main.Version=${VERSION} -X main.Build=${BUILD}"
 
+gen:
+	protoc --proto_path=proto proto/*.proto --go_out=plugins=grpc:internal/grpc/service --grpc-gateway_out=:internal/grpc/service --swagger_out=:docs
 
 build:
 	go build -o ${BINARY} server/*.go

@@ -4,11 +4,16 @@ package service;
 
 option go_package = "github.com/yudafatah/golang-microservices-boilerplate/tree/main/Identity/internal/grpc/service";
 
-import "github.com/yudafatah/golang-microservices-boilerplate/tree/main/Identity/internal/proto-files/domain/auth.proto";
+import "github.com/googleapis/googleapis/blob/master/google/api/annotations.proto";
+import "github.com/yudafatah/golang-microservices-boilerplate/blob/main/Identity/internal/proto-files/domain/auth.proto";
 
 //UserService Definition
 service AuthService {
 	rpc auth (domain.Auth) returns (AuthResponse);
+	option (google.api.http) = {
+		post:"/api/identity/login"
+		body:"*"
+	};
 }
  
 message AuthResponse {
@@ -19,7 +24,6 @@ message Error {
 	string code = 1;
 	string message = 2;
 }
-
 message Token{
 	string token = 1;
 	string refresher = 2;
