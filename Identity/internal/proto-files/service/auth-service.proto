@@ -4,11 +4,11 @@ package service;
 
 option go_package = "github.com/yudafatah/golang-microservices-boilerplate/tree/main/Identity/internal/grpc/service";
 
-import "github.com/yudafatah/golang-microservices-boilerplate/tree/main/Identity/internal/proto-files/domain/user.proto";
+import "github.com/yudafatah/golang-microservices-boilerplate/tree/main/Identity/internal/proto-files/domain/auth.proto";
 
 //UserService Definition
-service UserService {
-	rpc auth (domain.User) returns (AuthResponse);
+service AuthService {
+	rpc auth (domain.Auth) returns (AuthResponse);
 }
  
 message AuthResponse {
