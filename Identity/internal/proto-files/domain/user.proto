@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package domain;
+
+option go_package = "github.com/yudafatah/golang-microservices-boilerplate/tree/main/Identity/internal/grpc/domain";
+
+message User {
+	string id = 1;
+	string lastName = 2;
+	string firstName = 3;
+	string username = 4;
+	string createdTime = 5;
+	string updatedTime = 6;
+	string oldHashPassword = 7;
+	string hashPassword = 8;
+	string email = 9;
+	string address = 10;
+	string about = 11;
+	string phoneNumber = 12;
+	string country = 13;
+	bool isActive = 14;
+	bool isDeleted = 15;
+	string profilePicture = 16;
+	string profileCoverPicture = 17;  
+}
