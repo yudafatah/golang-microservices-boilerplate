@@ -8,7 +8,7 @@ import "github.com/yudafatah/golang-microservices-boilerplate/tree/main/Identity
 
 //UserService Definition
 service UserService {
-	rpc add (domain.User) returns (AuthResponse);
+	rpc auth (domain.User) returns (AuthResponse);
 }
  
 message AuthResponse {
