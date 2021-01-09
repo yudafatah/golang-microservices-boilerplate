@@ -9,7 +9,18 @@ BUILD=`git rev-parse HEAD`
 # LDFLAGS=-ldflags "-X main.Version=${VERSION} -X main.Build=${BUILD}"
 
 gen:
-	protoc --proto_path=proto proto/*.proto --go_out=plugins=grpc:internal/grpc/service --grpc-gateway_out=:internal/grpc/service --swagger_out=:docs
+	protoc \ 
+	--proto_path=internal/proto-files/domain \ 
+	--go_out=internal/grpc/domain \ 
+	--go_opt=paths=source_relative internal/proto-files/domain/*.proto \ 
+	--grpc-gateway_out=:internal/grpc/gateway \
+	--swagger_out=:docs
+	protoc \ 
+	--proto_path=internal/proto-files/service \ 
+	--go_out=internal/grpc/service \ 
+	--go_opt=paths=source_relative internal/proto-files/service/*.proto \ 
+	--grpc-gateway_out=:internal/grpc/gateway \
+	--swagger_out=:docs
 
 build:
 	go build -o ${BINARY} server/*.go

@@ -9,10 +9,11 @@ import "github.com/yudafatah/golang-microservices-boilerplate/blob/main/Identity
 
 //UserService Definition
 service AuthService {
-	rpc auth (domain.Auth) returns (AuthResponse);
-	option (google.api.http) = {
-		post:"/api/identity/login"
-		body:"*"
+	rpc auth (domain.Auth) returns (AuthResponse){
+		option (google.api.http) = {
+			post:"/api/identity/login"
+			body:"*"
+		};
 	};
 }
  
