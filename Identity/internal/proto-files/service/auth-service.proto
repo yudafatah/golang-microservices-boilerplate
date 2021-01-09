@@ -2,10 +2,10 @@ syntax = "proto3";
 
 package service;
 
-option go_package = "github.com/yudafatah/golang-microservices-boilerplate/tree/main/Identity/internal/grpc/service";
+option go_package = "github.com/yudafatah/golang-microservices-boilerplate/blob/main/Identity/internal/proto-files/domain";
 
-import "github.com/googleapis/googleapis/blob/master/google/api/annotations.proto";
-import "github.com/yudafatah/golang-microservices-boilerplate/blob/main/Identity/internal/proto-files/domain/auth.proto";
+import "google/api/annotations.proto";
+import "auth.proto";
 
 //UserService Definition
 service AuthService {

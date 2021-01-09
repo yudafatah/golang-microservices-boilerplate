@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package domain;
 
-option go_package = "github.com/yudafatah/golang-microservices-boilerplate/tree/main/Identity/internal/grpc/domain";
+option go_package = "github.com/yudafatah/golang-microservices-boilerplate/blob/main/Identity/internal/proto-files/domain";
 
 message Auth {
 	string username = 1;
