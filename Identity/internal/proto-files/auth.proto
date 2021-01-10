@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package identity.pb;
+
+option go_package = "github.com/yudafatah/golang-microservices-boilerplate/blob/main/Identity/internal/grpc/pb";
+
+message Auth {
+	string username = 1;
+	string password = 2;
+	string clientId = 3;
+}

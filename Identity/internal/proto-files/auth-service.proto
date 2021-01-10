@@ -1,15 +1,15 @@
 syntax = "proto3";
 
-package service;
+package identity.pb;
 
-option go_package = "github.com/yudafatah/golang-microservices-boilerplate/blob/main/Identity/internal/proto-files/domain";
+option go_package = "github.com/yudafatah/golang-microservices-boilerplate/blob/main/Identity/internal/grpc/pb";
 
 import "google/api/annotations.proto";
 import "auth.proto";
 
-//UserService Definition
+//AuthService Definition
 service AuthService {
-	rpc auth (domain.Auth) returns (AuthResponse){
+	rpc AuthUser(identity.pb.Auth) returns (AuthResponse){
 		option (google.api.http) = {
 			post:"/api/identity/login"
 			body:"*"

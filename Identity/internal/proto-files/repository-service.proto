@@ -1,10 +1,10 @@
 syntax = "proto3";
 
-package service;
+package identity.pb;
 
 option go_package = "github.com/yudafatah/golang-microservices-boilerplate/tree/main/Identity/internal/grpc/service";
 
-import "github.com/yudafatah/golang-microservices-boilerplate/tree/main/Identity/internal/proto-files/domain/repository.proto";
+import "github.com/yudafatah/golang-microservices-boilerplate/tree/main/Identity/internal/proto-files/repository.proto";
 
 //RepositoryService Definition
 service RepositoryService {

@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package domain;
+package identity.pb;
 
 option go_package = "github.com/yudafatah/golang-microservices-boilerplate/tree/main/Identity/internal/grpc/domain";
 
